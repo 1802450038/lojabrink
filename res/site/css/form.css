@@ -1,0 +1,88 @@
+.input-group {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: var(--main-color-l2);
+    border: 1px solid var(--main-color-l1);
+    
+}
+
+.input-group input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    color: var(--sub-color-d2);
+    padding-left: 20px;
+    background-color: transparent;
+    font-size: 18pt;
+}
+    
+.input-group i {
+    font-size: 12pt;
+    position: absolute;
+    left: 100%;
+    transform: translate(-100%, 0%);
+    margin-left: -20px;
+    color: var(--sub-color-d2);
+}
+
+
+input[type=checkbox] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    -moz-appearance: none;
+         appearance: none;
+    /* For iOS < 15 */
+    /* background-color: var(--form-background); */
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--main-color-d3);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type=checkbox]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    -webkit-clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: var(--main-color-l3);
+  }
+  
+  input[type=checkbox]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type=checkbox]:checked {
+    background-color:  var(--main-color-l1);
+    border: 0.15em solid var(--main-color-l1);
+  }
+  
+  input[type=checkbox]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+  
+  input[type=checkbox]:disabled {
+    --form-control-color: var(--form-control-disabled);
+    color: var(--form-control-disabled);
+    cursor: not-allowed;
+  }

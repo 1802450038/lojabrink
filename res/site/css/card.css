@@ -1,0 +1,143 @@
+
+
+
+.card {
+    /* background-color: darkorchid; */
+    border: 1px solid var(--main-color-l1);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .card-top {
+    /* background-color: darkkhaki; */
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .card-top .card-img {
+    position: absolute;
+    /* background-color: aqua; */
+    /* width: 100%; */
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    border-radius: 30px;
+    transform: translate(-50%,-50%);
+}
+
+.card .card-top .card-img-button {
+    /* background-color: rgba(187, 187, 187, 0.655); */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+    z-index: 99;
+    color: var(--main-color-l3);
+    background-color: var(--sub-color-l2);
+    transition: all .3s ease-in-out;
+}
+.card .card-top .card-img-button:hover i{ 
+    font-size: 15pt;
+}
+
+
+
+
+.grid-item .card .card-middle {
+    height: 30%;
+    width: 100%;
+    padding: 0 20px;
+    color: var(--main-color);
+}
+.card .card-bottom {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.card .card-bottom .card-bottom-action{
+    width: 100%;
+    height: 40px;
+    background-color: var(--main-color-l3);
+    border: 1px solid var(--main-color);
+}
+
+.card .card-bottom .card-bottom-action a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 20px; */
+    column-gap: 20px;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13pt;
+    color: var(--main-color);
+}
+
+.card .card-bottom .card-bottom-action:hover{
+    background-color: var(--sub-color-l2);
+}
+.card .card-bottom .card-bottom-action:hover a{
+    color: var(--main-color-l3);
+}
+
+
+.card-image {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: calc(25% - 7.5px);
+    margin-left: 2.5px;
+    height: 200px;
+    background-color: var(--main-color-d2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:  100%;
+}
+
+.card-image-legend {
+    background-color: rgba(56, 56, 56, 0.527);
+    width: 100%;
+    opacity: 0;
+    padding: 10px 10px;
+    z-index: 9999;
+    color: var(--main-color-l3);
+    transition: all .3s ease-in-out;
+}
+
+.card-image-legend p {
+    line-break: auto;
+    word-wrap: break-word;
+}
+
+
+.card-image:hover .card-image-legend {
+    opacity: 1;
+}
+
